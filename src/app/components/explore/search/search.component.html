@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
+
+
+<!-- Initial Search -->
+<div class="container" *ngIf="stateSearched == false">
+  <div class="row">
+    <div class="col">
+      <div class="search">
+        <div class="container">
+          <h3 class="header-semi-bold">Lets find your perfect space, what area are you looking to move to?</h3>
+          <ngxgeo-autocomplete [userSettings]="userSettings" name="address" #listingAddress="ngModel" [(ngModel)]="Address" [ngClass]="{'is-invalid': listingAddress.errors && listingAddress.touched}" (componentCallback)="autoCompleteCallback1($event)"></ngxgeo-autocomplete>
+        </div>
+        <div class="button-div">
+          <button class="btn" (click)="searchAddress()">Search</button>
+        </div>
+      </div>
+    </div>
+    <div class="col d-none d-lg-block d-xl-block">
+      <img class="placeholder-img" src="../../../../assets/imgs/search-desktop.jpg" />
+    </div>
+  </div>
+</div>

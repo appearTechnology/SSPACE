@@ -1,0 +1,96 @@
+.logo{
+  margin: 10px;
+}
+
+.search {
+  margin-top: 30%;
+  width: 100%;
+}
+
+.navbar {
+  background-color: transparent;
+  background-color: #313131;
+  height: 80px;
+  background-color: transparent
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 100vh;
+  margin-left: 85px;
+}
+
+.header-semi-bold {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.btn {
+  background-color: #000;
+  color: white;
+  margin: 20px;
+  position: absolute;
+  right: 10px;
+}
+
+.button-div {
+  padding-top: 50px;
+  height: 50px;
+}
+
+.searchnav {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.search-contrainer {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-bottom: 35px;
+  width: 100%;
+  height: 350px;
+  min-width: 350px;
+  max-width: 350px;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E2E2E2;
+}
+
+.card:hover{
+  box-shadow: 0 10px 20px 0 rgba(187, 187, 187, 0.05);
+}
+.card-img-top{
+  background-color: #fafafa;
+  height: 200px;
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+
+}
+.center {
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.card-text{
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 15px;
+  color: #1F2531;
+
+}
+.card-address{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 13px;
+  color: #1F2531;
+}
+
+.listing-div{
+  margin-top: 30px;
+}

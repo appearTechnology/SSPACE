@@ -1,0 +1,9 @@
+<div class="card" *ngIf="loaded == true">
+  <div class="card-header">
+    <img src="{{agentProfile.profilePic}}" class="profile-pic">
+    <h5 class="card-name">{{agentProfile.first_name}} {{agentProfile.last_name}}</h5>
+  </div>
+  <div class="chat-box">
+    <app-chat-window [client]="uid" [agent]="agent"></app-chat-window>
+  </div>
+</div>

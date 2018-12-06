@@ -1,0 +1,136 @@
+<div class="container">
+
+  <div class="row">
+    <div *ngIf="listing.status == 0" class="col">
+      <h3>Your listing is unpublished</h3>
+      <button (click)="publish()" class="btn btn-publish">publish</button>
+    </div>
+    <div *ngIf="listing.status == 1" class="col">
+      <h3>Your listing is live</h3>
+      <button (click)="unpublish()" class="btn btn-unpublish">unpublish</button>
+    </div>
+  </div>
+
+  <form #listingForm="ngForm" (ngSubmit)="onSubmit(listingForm)">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="label" for="firstName">Title</label>
+          <input type="text" class="form-control" name="firstName" #listingTitle="ngModel" [ngClass]="{'is-invalid': listingTitle.errors && listingTitle.touched}" [(ngModel)]="listing.title" minlength="2" maxlength="25" required [attr.disabled]="edit === false ? '' : null"
+          />
+          <div [hidden]="!listingTitle.errors?.required" class="invalid-feedback">
+            Title required
+          </div>
+          <div [hidden]="!listingTitle.errors?.minlength" class="invalid-feedback">
+            Must be adleast 2 characters
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="label" for="size">Size m²</label>
+          <input type="number" class="form-control" name="size" #sizeTitle="ngModel" [ngClass]="{'is-invalid': sizeTitle.errors && sizeTitle.touched}" [(ngModel)]="listing.size" minlength="1" maxlength="4" required [attr.disabled]="edit === false ? '' : null" />
+          <div [hidden]="!sizeTitle.errors?.required" class="invalid-feedback">
+            Size required
+          </div>
+          <div [hidden]="!sizeTitle.errors?.minlength" class="invalid-feedback">
+            enter a valid size in m²
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="area-specilise" class="label">Type Of Property</label>
+      <br />
+      <select class="form-control" name="typeOfProperty" [(ngModel)]="listing.propertyType" #propertyType="ngModel" [ngClass]="{'is-invalid': propertyType.errors && tpropertyType.touched}" [attr.disabled]="edit === false ? '' : null" required>
+        <option disabled>Type Of Property</option>
+        <option>Retail</option>
+        <option>Resturant</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="label" for="rent">Rent Per Day</label>
+          <input type="number" class="form-control" name="rent" #rentPerWeek="ngModel" [ngClass]="{'is-invalid': rentPerWeek.errors && rentPerWeek.touched}" [(ngModel)]="listing.rent" minlength="2" maxlength="5" required [attr.disabled]="edit === false ? '' : null"
+          />
+          <div [hidden]="!listingTitle.errors?.required" class="invalid-feedback">
+            rent required
+          </div>
+          <div [hidden]="!listingTitle.errors?.minlength" class="invalid-feedback">
+            Add rent per week
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="label" for="bond">Bond</label>
+          <input type="number" class="form-control" name="bond" #bond="ngModel" [ngClass]="{'is-invalid': bond.errors && bond.touched}" [(ngModel)]="listing.bond" minlength="2" required [attr.disabled]="edit === false ? '' : null" />
+          <div [hidden]="!bond.errors?.required" class="invalid-feedback">
+            Bond required
+          </div>
+          <div [hidden]="!bond.errors?.minlength" class="invalid-feedback">
+            Add a bond
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="label" for="term">Minimum Term</label>
+          <input type="number" class="form-control" name="term" #minTerm="ngModel" [ngClass]="{'is-invalid': minTerm.errors && minTerm.touched}" [(ngModel)]="listing.mindays" minlength="1" required [attr.disabled]="edit === false ? '' : null" />
+          <div [hidden]="!minTerm.errors?.required" class="invalid-feedback">
+            minimum term required
+          </div>
+          <div [hidden]="!minTerm.errors?.minlength" class="invalid-feedback">
+            add a minimum term
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="label" for="bond">Bond</label>
+          <input type="number" class="form-control" name="bond" #bond="ngModel" [ngClass]="{'is-invalid': bond.errors && bond.touched}" [(ngModel)]="listing.bond" minlength="2" required [attr.disabled]="edit === false ? '' : null" />
+          <div [hidden]="!bond.errors?.required" class="invalid-feedback">
+            Bond required
+          </div>
+          <div [hidden]="!bond.errors?.minlength" class="invalid-feedback">
+            Add a bond
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="label" for="bond">Amenities</label>
+      <div class="row">
+        <div class="col-amenities" *ngFor="let amenity of this.listing.amenities">
+          <button *ngIf="amenity.selected == true" class="badge-true" (click)="selectedAmenity(amenity)">{{amenity.title}}</button>
+          <button *ngIf="amenity.selected == false" class="badge" (click)="selectedAmenity(amenity)">{{amenity.title}}</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="label" for="features">Features</label>
+      <textarea rows="8" type="text-area" class="form-control" name="features" placeholder="Add a listof features" [(ngModel)]="listing.features" #featuresList="ngModel" [ngClass]="{'is-invalid': featuresList.errors && featuresList.touched}" [attr.disabled]="edit === false ? '' : null"
+        required>
+    </textarea>
+    </div>
+    <div class="container">
+      <flash-messages></flash-messages>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Save Changes</button>
+  </form>
+</div>

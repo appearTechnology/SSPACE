@@ -1,0 +1,53 @@
+.input-group {
+  margin-top: 50px;
+}
+
+.semi-bold-label{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.address {
+  width: 500px;
+  margin: auto;
+}
+
+.form-control {
+  height: 60px;
+}
+
+.button-add {
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 500px;
+  height: 58px;
+  background-color: #3354D1;
+  color: white;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.button-add-disabled {
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 500px;
+  height: 58px;
+  background-color: #D8D8D8;
+  color: white;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.invalid{
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 14px;
+}
+
+.button-add:hover {
+  box-shadow: 0 10px 20px 0 rgba(80, 123, 252, 0.5);
+}
+
+.btn{
+  background-color: #313131;
+  color: #fff
+}

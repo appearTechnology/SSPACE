@@ -1,0 +1,69 @@
+<!--<app-nav-bar-address (newDoc)="onNewDoc($event)"></app-nav-bar-address>-->
+<nav class="navbar fixed-top">
+  <img href="/location" class="logo d-none d-md-block d-lg-block d-xl-block" src="../../../assets/imgs/logo-white.svg" />
+  <!--ngxgeo-autocomplete class="searchnav" [userSettings]="userSettings" name="address" [(ngModel)]="this.formatted_address" (componentCallback)="autoCompleteCallback1($event)"></ngxgeo-autocomplete>-->
+  <div class="demo">
+    <h3 class="ff" (click)="editAddress()" *ngIf="enterAddress == false">{{formatted_address}}</h3>
+    <ngxgeo-autocomplete *ngIf="enterAddress == true" class="searchnav" [userSettings]="userSettings" name="address" (componentCallback)="autoCompleteCallback1($event)"></ngxgeo-autocomplete>
+  </div>
+
+  <div class="spacing d-none d-md-block d-lg-block d-xl-block"></div>
+    <!--<img (click)="select()" src="../../../assets/icons/profile.svg" class="profile-pic d-none d-md-block d-lg-block d-xl-block"/>-->
+</nav>
+
+<!--<mat-toolbar class="mat-toolbar">
+  <div class="demo" >
+    <h3 class="ff" (click)="editAddress()" *ngIf="enterAddress == false">{{formatted_address}}</h3>
+    <ngxgeo-autocomplete *ngIf="enterAddress == true" class="searchnav" [userSettings]="userSettings" name="address" (componentCallback)="autoCompleteCallback1($event)"></ngxgeo-autocomplete>
+  </div>
+
+</mat-toolbar>-->
+
+<!-- Search Retsults -->
+<div class="container">
+  <div class="center" *ngIf="loading == true">
+    <app-loading></app-loading>
+  </div>
+
+  <div class="listing-div" *ngIf="loading == false">
+    <div class="search-results"
+      infinite-scroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="1000">
+
+    <div class="row" *ngIf="listings?.length > 0">
+      <div class="col-lg-4 col-md-6 col-sm" *ngFor="let listing of listings">
+        <div class="card">
+          <slideshow *ngIf="listing.imageGallery?.length > 0" class="card-img-top" [imageUrls]="listing.imageGallery" [arrowSize]="'10px'" [autoPlay]="false" [showDots]="true"></slideshow>
+          <!--<img *ngIf="listing.imageGallery?.length > 0" class="card-img-top" src={{listing.profilePic}} alt="Card image cap">-->
+          <img *ngIf="listing.imageGallery?.length == null" class="card-img-top" src={{listing.profilePic}} alt="Card image cap">
+          <div class="card-body" (click)="listingProfile(listing.id)">
+            <p class="card-text">{{listing.title}}</p>
+            <p class="card-address">{{listing.formatted_address}}</p>
+
+            <div class="row">
+              <div class="col">
+                <img class="icon" src="../../../assets/icons/measure-purple.svg" />
+                <h3 class="square-meters">{{listing.size}} m²</h3>
+              </div>
+
+              <div class="col">
+                <p class="card-price">$ {{listing.rent}} per day</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="listings?.length <= 0">
+      <div class="no-data">
+        <lottie-animation-view [options]="lottieConfigNotFound" [width]="200" [height]="200" (animCreated)="handleAnimation($event)">
+        </lottie-animation-view>
+        <h3 class="no-data-text">Sorry we are not in your area yet , please try a different location.</h3>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

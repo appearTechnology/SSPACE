@@ -1,0 +1,18 @@
+<div class="split left d-none d-lg-block d-xl-block" *ngIf="this.loaded == true">
+  <div class="centered">
+   <app-dashboard-sidebar [profile]="profile" (newDoc)="onNewDoc($event)"></app-dashboard-sidebar>
+  </div>
+</div>
+
+<div class="split right d-none d-lg-block d-xl-block" *ngIf="this.loaded == true">
+  <div class="centered">
+    <app-property-listings *ngIf="this.display == 1"></app-property-listings>
+    <app-client-panel [uid]="uid" *ngIf="this.display == 2"></app-client-panel>
+  </div>
+</div>
+
+<div class="d-sm-block d-lg-none d-xl-none" *ngIf="this.loaded == true">
+  <div class="centered">
+    <app-property-listings></app-property-listings>
+  </div>
+</div>

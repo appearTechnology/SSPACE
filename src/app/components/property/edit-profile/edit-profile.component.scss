@@ -1,0 +1,51 @@
+.btn{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: black;
+  color: white;
+}
+
+.btn-unpublish{
+  background-color: #D8D8D8
+}
+
+.btn-publish{
+  background-color: #01B140
+}
+
+.badge{
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-top: 30px;
+  height: 40px;
+  width: 150px;
+  border-color: #9F9F9F;
+  background-color: #fff;
+  border-width: 1px;
+  color: #454545;
+  outline: none;
+  font-size: 16px;
+}
+
+.badge-true{
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-top: 30px;
+  height: 40px;
+  width: 150px;
+  border-color: #008BB3;
+  background-color: #008BB3;
+  border-width: 1px;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+}
+
+.col-amenities{
+  //width: 200px;
+  margin-left: 20px;
+}

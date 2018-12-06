@@ -1,0 +1,34 @@
+<div class="container">
+  <nav class="navbar fixed-top navbar-light bg-light">
+    <button class="add-btn" routerLink="addproperty">ADD A PROPERTY</button>
+  </nav>
+  <br />
+  <br />
+
+  <div class="center" *ngIf="loaded">
+    <app-loading></app-loading>
+  </div>
+  <div class="row" *ngIf="listings?.length > 0; else noListings">
+    <div class="col-lg-4 col-md col-sm" *ngFor="let listing of listings">
+      <div class="card" routerLink="property/{{ listing.id }}">
+        <img *ngIf="listing.imageGallery?.length > 0" class="card-img-top" src={{listing.profilePic}} alt="Card image cap">
+          <img *ngIf="listing.imageGallery?.length == null" class="card-img-top" src={{listing.profilePic}} alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{listing.title}}</p>
+          <p class="card-address">{{listing.formatted_address}}</p>
+          <p *ngIf="listing.status == 1" class="card-published">published</p>
+          <p *ngIf="listing.status == 0" class="card-unpublished">unpublished</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<ng-template #noListings>
+  <div class="not-found">
+    <lottie-animation-view [options]="lottieConfigNotFound" [width]="200" [height]="200" (animCreated)="handleAnimation($event)">
+    </lottie-animation-view>
+  </div>
+</ng-template>

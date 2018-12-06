@@ -1,0 +1,29 @@
+<div class="features">
+  <h3 class="regular-label">Select your listings Amenities</h3>
+
+  <div class="row">
+    <div class="col-amenities" *ngFor="let amenity of amenities">
+      <button *ngIf="amenity.selected == true" class="badge-true" (click)="selectedAmenityRemove(amenity)">{{amenity.title}}</button>
+      <button *ngIf="amenity.selected == false" class="badge" (click)="selectedAmenityAdd(amenity)">{{amenity.title}}</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="outline" class="date">
+        <input matInput [(ngModel)]="dateFrom" [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Availability From">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="col">
+      <mat-form-field appearance="outline" class="date">
+        <input matInput [(ngModel)]="dateTo" [min]="minDate" [max]="maxDate" [matDatepicker]="picker2" placeholder="Availability To">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+    </div>
+  </div>
+  <button type="submit" class="button-add" (click)="updateClient()">Continue your listing</button>
+</div>

@@ -1,0 +1,28 @@
+<div class="profile-sidebar" (click)="openDialog()" *ngIf="this.loaded == true">
+<img src={{profile.profilePic}} class="profile-pic" />
+  <h3 class="header-regular">{{profile.first_name}} {{profile.last_name}}</h3>
+</div>
+<div class="sidebar">
+<mat-list role="list">
+  <mat-list-item (click)="home()" *ngIf="property == true" role="listitem">
+    <mat-icon class="icon-selected">home</mat-icon>
+    <h3 class="sidebar-button-text-selected"> property</h3>
+  </mat-list-item>
+  <mat-list-item (click)="home()" *ngIf="property == false" role="listitem">
+    <mat-icon class="icon">home</mat-icon>
+    <h3 class="sidebar-button-text"> property</h3>
+  </mat-list-item>
+  <!--<mat-list-item (click)="client()" *ngIf="clients == true" role="listitem">
+    <mat-icon class="icon-selected">people</mat-icon>
+    <h3 class="sidebar-button-text-selected"> clients</h3>
+  </mat-list-item>
+  <mat-list-item (click)="client()" *ngIf="clients == false" role="listitem">
+    <mat-icon class="icon" matBadge="1" matBadgeColor="warn">people</mat-icon>
+    <h3 class="sidebar-button-text"> clients</h3>
+  </mat-list-item>-->
+</mat-list>
+
+</div>
+<footer class="footer fixed-bottom">
+  <button class="logout-button" (click)="logout()">logout</button>
+</footer>

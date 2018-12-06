@@ -1,0 +1,23 @@
+<div class="address">
+  <h3 class="semi-bold-label">Please enter your property address</h3>
+
+  <!--<ngxgeo-autocomplete [userSettings]="userSettings" (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>-->
+
+  <form #listingForm="ngForm" (ngSubmit)="onSubmit(listingForm)">
+    <div class="form-group">
+      <ngxgeo-autocomplete [userSettings]="userSettings" name="address" #listingAddress="ngModel" [(ngModel)]="Address" [ngClass]="{'is-invalid': listingAddress.errors && listingAddress.touched}"  (componentCallback)="autoCompleteCallback1($event)"></ngxgeo-autocomplete>
+      <!--<input google-place type="text" name="address" #listingAddress="ngModel" (onSelect)="setAddress($event)" [(ngModel)]="Address" [ngClass]="{'is-invalid': listingAddress.errors && listingAddress.touched}" class="form-control" placeholder="select an address" minlength="1" required>-->
+      <div [hidden]="!listingAddress.errors?.required" class="invalid-feedback">
+        Please enter an address
+      </div>
+      <div [hidden]="!listingAddress.errors?.minlength" class="invalid-feedback">
+        Must be a valid phone address
+      </div>
+
+    </div>
+    <h3 class="invalid" *ngIf="addressValidShow === true">Please select a valid address from drop down</h3>
+    <button *ngIf="buttonValid === true && addDataLoad === false"  type="submit" class="button-add">Create a property</button>
+  </form>
+  <button *ngIf="buttonDisabled === true" class="button-add-disabled">Create a property</button>
+  <app-loading *ngIf="addDataLoad === true"></app-loading>
+</div>

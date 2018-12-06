@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>storageroom</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="75" cy="75" r="74"></circle>
+        <filter x="-4.7%" y="-3.4%" width="109.5%" height="109.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.737457483   0 0 0 0 0.737457483   0 0 0 0 0.737457483  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="storageroom" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#ECF0F1" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="noun_Box_920144" transform="translate(46.000000, 50.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Group">
+                <path d="M0.2227,11.146875 L4.479,11.146875 L4.479,49.71875 L53.521,49.71875 L53.521,11.146875 L57.7773,11.146875 L57.7773,0.28125 L0.2227,0.28125 L0.2227,11.146875 Z M51.8377,48.01875 L6.1654,48.01875 L6.1654,11.146875 L51.8377,11.146875 L51.8377,48.01875 Z M1.9091,1.98125 L56.094,1.98125 L56.094,9.446875 L53.521,9.446875 L4.479,9.446875 L1.9091,9.446875 L1.9091,1.98125 Z" id="Shape"></path>
+                <path d="M40.5661,15.69375 L17.4339,15.69375 L17.4339,23.478125 L40.5692,23.478125 L40.5692,15.69375 L40.5661,15.69375 Z M38.8828,21.775 L19.1172,21.775 L19.1172,17.39375 L38.8828,17.39375 L38.8828,21.775 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>security</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="75" cy="75" r="74"></circle>
+        <filter x="-4.7%" y="-3.4%" width="109.5%" height="109.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.737457483   0 0 0 0 0.737457483   0 0 0 0 0.737457483  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="security" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#ECF0F1" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="noun_Lock_2019797" transform="translate(52.000000, 45.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M44.7222222,22.8358209 L36.6722222,22.8358209 L36.6722222,13.6886994 C36.6722222,6.14072495 30.5388889,0 23,0 C15.4611111,0 9.32777778,6.14072495 9.32777778,13.6886994 L9.32777778,22.8358209 L1.27777778,22.8358209 C0.575,22.8358209 0,23.4115139 0,24.1151386 L0,58.7206823 C0,59.424307 0.575,60 1.27777778,60 L44.7222222,60 C45.425,60 46,59.424307 46,58.7206823 L46,24.1151386 C46,23.4115139 45.425,22.8358209 44.7222222,22.8358209 Z M11.8833333,13.6886994 C11.8833333,7.54797441 16.8666667,2.55863539 23,2.55863539 C29.1333333,2.55863539 34.1166667,7.54797441 34.1166667,13.6886994 L34.1166667,22.8358209 L11.8833333,22.8358209 L11.8833333,13.6886994 Z M43.4444444,57.4413646 L2.55555556,57.4413646 L2.55555556,25.3944563 L43.4444444,25.3944563 L43.4444444,57.4413646 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

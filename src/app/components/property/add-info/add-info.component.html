@@ -1,0 +1,34 @@
+<div class="features">
+  <h3 class="regular-label">Abit more info about your listing</h3>
+  <div class="row">
+
+    <div class="col">
+      <mat-form-field appearance="outline" class="formfield">
+        <mat-label >Rent Per Day</mat-label>
+        <mat-icon matSuffix>attach_money</mat-icon>
+        <input [(ngModel)]="rent" type="number" maxlength="2" matInput placeholder="day rate">
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <mat-form-field appearance="outline" class="formfield">
+        <mat-label>Bond</mat-label>
+        <input [(ngModel)]="bond" type="number" maxlength="2" matInput placeholder="cost per week">
+        <mat-icon matSuffix>verified_user</mat-icon>
+      </mat-form-field>
+    </div>
+
+
+  </div>
+
+
+  <mat-form-field appearance="outline" class="textarea">
+    <mat-label>Features</mat-label>
+    <textarea [(ngModel)]="features" matInput placeholder="Textarea" rows="10"></textarea>
+  </mat-form-field>
+  <div class="container">
+    <flash-messages></flash-messages>
+  </div>
+
+  <button type="submit" class="button-add" (click)="updateClient(value)">Create a property</button>
+</div>

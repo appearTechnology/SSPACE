@@ -1,0 +1,18 @@
+<nav class="navbar fixed-top">
+  <button routerLink="/" class="btn-back">
+    <i class="material-icons">keyboard_backspace</i>
+  </button>
+  <button *ngIf="stage == 5 && edited == false" (click)="edit()" class="edit-btn">Edit listing</button>
+</nav>
+
+<slideshow *ngIf="stage == 5 && edited == false" [imageUrls]="images" [autoPlay]="true"></slideshow>
+
+<div class="container">
+  <app-loading *ngIf="loaded"></app-loading>
+  <app-property-display *ngIf="stage == 5 && edited == false" [docId]="docId" [listing]=listing [images]=images></app-property-display>
+  <app-add-features *ngIf="stage == 1" [docId]="docId" [stage]="stage" (newDoc)="onStage3($event)"></app-add-features>
+  <app-add-info *ngIf="stage == 2" [docId]="docId" [stage]="stage" (newDoc)="onStage4($event)"></app-add-info>
+  <app-add-amenities *ngIf="stage == 3" [docId]="docId" [stage]="stage" (newDoc)="onStage5($event)"></app-add-amenities>
+  <app-add-images *ngIf="stage == 4" [docId]="docId" [stage]="stage" (newDoc)="onStage6($event)"></app-add-images>
+  <app-edit-profile *ngIf="edited == true" [docId]="docId" [listing]=listing></app-edit-profile>
+</div>

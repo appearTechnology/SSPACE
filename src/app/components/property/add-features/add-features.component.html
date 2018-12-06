@@ -1,0 +1,71 @@
+<div class="features">
+  <h3 class="regular-label">Type of listing</h3>
+  <div class="row">
+    <div class="col" *ngIf="selectedRetail === false" (click)="selectRetail()">
+      <div class="container-icon">
+        <img class="typeIcon" src="../../../assets/icons/retail-normal.svg" />
+        <h3 class="center-label">Retail</h3>
+      </div>
+    </div>
+
+    <div class="col" *ngIf="selectedRetail === true">
+      <div class="container-icon-selected">
+        <img class="typeIcon" src="../../../assets/icons/retail-selected.svg" />
+        <h3 class="center-label-selected">Retail</h3>
+      </div>
+    </div>
+
+
+    <div class="col" *ngIf="selectedRestaurant === false" (click)="selectRestaurant()">
+      <div class="container-icon">
+        <img class="typeIcon" src="../../../assets/icons/restaurant-normal.svg" />
+        <h3 class="center-label">Restaurant</h3>
+      </div>
+    </div>
+
+    <div class="col" *ngIf="selectedRestaurant === true">
+      <div class="container-icon-selected">
+        <img class="typeIcon" src="../../../assets/icons/restaurant-selected.svg" />
+        <h3 class="center-label-selected">Restaurant</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bbp" *ngIf="selected1 === true">
+  <div class="container">
+    <div class="col1">
+      <mat-form-field appearance="outline" class="formfield-title">
+        <mat-label>Listing Title</mat-label>
+        <input [(ngModel)]="title" type="test" maxlength="40" matInput placeholder="listing name?">
+      </mat-form-field>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>Size m²</mat-label>
+          <input [(ngModel)]="size" type="number" maxlength="2" matInput placeholder="how many bedrooms">
+          <mat-icon matSuffix>crop_free</mat-icon>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>Minimum term (Days)</mat-label>
+          <input [(ngModel)]="mindays" type="number" maxlength="2" matInput placeholder="Minimum stay in days">
+          <mat-icon matSuffix>calendar_today</mat-icon>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="container">
+      <flash-messages></flash-messages>
+    </div>
+  </div>
+</div>
+
+<button *ngIf="selected1 === true" type="submit" class="button-add" (click)="updateClient()">Continue your listing</button>

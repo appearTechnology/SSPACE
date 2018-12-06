@@ -1,0 +1,31 @@
+.logo{
+  margin: 10px;
+}
+
+.profile-pic {
+  display:block;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 100%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ffffff;
+  object-fit: cover;
+  background-color: #a0a09f;
+}
+
+.navbar{
+  background-color: transparent
+}
+
+
+.search-btn:focus {
+   outline: none;
+   border: 0;
+}
+
+.search-btn{
+  background-color: #9F9F9F;
+}

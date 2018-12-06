@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-8 chat-col">
+    <nav class="navbar">
+    <!--<div class="profile">
+        <div class="profile-pic-div">
+          <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" class="profile-pic" />
+        </div>
+        <div class="client-text">
+          <h3 class="header-bold"> Davin Glick</h3>
+        </div>
+      </div>-->
+    </nav>
+    <div class="chat-box">
+      <app-chat-window [agent]="uid" [client]="clientId"></app-chat-window>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="message-history-div">
+      <app-agent-message-history [uid]="uid" (newDoc)="onNewDoc($event)"></app-agent-message-history>
+    </div>
+  </div>
+</div>

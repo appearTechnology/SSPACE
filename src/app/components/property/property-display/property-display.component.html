@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="property-info-div">
+        <h3 class="header-semi-light">{{listing.formatted_address}}</h3>
+        <br />
+        <div class="row">
+          <div class="image-text">
+            <img class="icon" src="../../../assets/icons/measure-dark.svg" />
+            <h3 class="header-bold">{{listing.size}} m²</h3>
+          </div>
+          <div class="image-text">
+            <img class="icon" src="../../../assets/icons/restaurant-dark.svg" />
+            <h3 class="header-bold">{{listing.propertyType}}</h3>
+          </div>
+          <div class="image-text" *ngIf="listing.propertyType === Retail">
+            <img class="icon" src="../../../assets/icons/retail-dark.svg" />
+            <h3 class="header-bold">{{listing.propertyType}}</h3>
+          </div>
+        </div>
+        <div class="seperator"></div>
+        <div>
+          <h3 class="label">Features</h3>
+          <p class="paragraph">
+            {{listing.features}}
+          </p>
+        </div>
+        <div class="seperator"></div>
+        <h3 class="label">Location</h3>
+        <br />
+        <agm-map [zoom]="16" [minZoom]="16" [maxZoom]="16" [latitude]="listing.lat" [longitude]="listing.lng">
+          <agm-marker [latitude]="listing.lat" [longitude]="listing.lng"></agm-marker>
+        </agm-map>
+        <div class="seperator"></div>
+        <div class="amenities">
+        <h3 class="label">Amenities</h3>
+        <br />
+        <div class="row">
+          <div class="col-icon" *ngFor="let item of amenities">
+            <div *ngIf="item.title == 'Aircon' && item.selected == true" class="single-amenity">
+              <img class="amenities-icon" src="../../../assets/icons/amenities/aircon.svg" />
+              <p class="paragraph-icon">Aircon</p>
+            </div>
+
+            <div *ngIf="item.title == 'Counter' && item.selected == true" class="single-amenity">
+              <img class="amenities-icon" src="../../../assets/icons/amenities/counter.svg" />
+              <p class="paragraph-icon">Counter</p>
+            </div>
+
+            <div *ngIf="item.title == 'Fitting' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/fitting.svg" />
+              <p class="paragraph-icon">Fitting Room</p>
+            </div>
+
+            <div *ngIf="item.title == 'Heater' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/heater.svg" />
+              <p class="paragraph-icon">Heater</p>
+            </div>
+
+            <div *ngIf="item.title == 'Lighting' && item.selected == true" class="single-amenity">
+              <img class="amenities-icon" src="../../../assets/icons/amenities/light.svg" />
+              <p class="paragraph-icon">Lighting</p>
+            </div>
+
+            <div *ngIf="item.title == 'Parking' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/parking.svg" />
+              <p class="paragraph-icon">Parking</p>
+            </div>
+
+            <div *ngIf="item.title == 'Security' && item.selected == true" class="single-amenity">
+              <img class="amenities-icon" src="../../../assets/icons/amenities/security.svg" />
+              <p class="paragraph-icon">Security</p>
+            </div>
+
+            <div *ngIf="item.title == 'Shelving' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/shelving.svg" />
+              <p class="paragraph-icon">Shelving</p>
+            </div>
+
+            <div *ngIf="item.title == 'Storage' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/storageroom.svg" />
+              <p class="paragraph-icon">Storage</p>
+            </div>
+
+            <div *ngIf="item.title == 'Toilets' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/toilet.svg" />
+              <p class="paragraph-icon">Toilet</p>
+            </div>
+
+            <div *ngIf="item.title == 'Wheelchair' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/wheelchair.svg" />
+              <p class="paragraph-icon">Wheelchair</p>
+            </div>
+
+            <div *ngIf="item.title == 'Wifi' && item.selected == true" class="single-amenity">
+              <img  class="amenities-icon" src="../../../assets/icons/amenities/wifi.svg" />
+              <p class="paragraph-icon">Wifi</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

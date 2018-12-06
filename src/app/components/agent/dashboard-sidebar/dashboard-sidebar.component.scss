@@ -1,0 +1,72 @@
+.sidebar{
+  margin: 20px;
+}
+
+
+.profile-sidebar{
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 150px;
+  text-align: center;
+  //background-color: #DADCF6
+}
+
+.header-regular{
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.profile-pic {
+  display:block;
+  margin:auto;
+  height: 80px;
+  width: 80px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 100%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ffffff;
+  object-fit: cover;
+  background-color: #a0a09f;
+}
+
+.sidebar-button-text-selected{
+  text-align: center;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-top: 8px;
+  font-family: 'Maven Pro';
+  color: #507bfc;
+}
+
+.icon-selected{
+  color: #507bfc;
+}
+
+
+.sidebar-button-text{
+  text-align: center;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-top: 8px;
+  font-family: 'Open Sans';
+  color: #98a0a6;
+}
+
+.icon{
+  color: #98a0a6;
+}
+
+.side-button{
+  background-color: transparent
+}
+
+.logout-button{
+  margin-left: 25px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-width: 0px;
+  font-family: 'Open Sans';
+  color: #98a0a6;
+}

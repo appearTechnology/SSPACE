@@ -1,0 +1,19 @@
+<div class="scroll-div">
+<ng-scrollbar barClass="scroll-bar" thumbClass="scroll-thumbs">
+  <div class="row" *ngFor="let item of clients">
+    <div class="client-div" (click)="selectedUser(item.clientId)">
+      <div class="profile-pic-div">
+        <div class="notification-badge" *ngIf="item.alert > 0">
+          <h3 class="alert-title">{{item.alert}}</h3></div>
+        <img src="{{item.profilePic}}" class="profile-pic">
+      </div>
+
+      <div class="client-text">
+        <h5 class="clientName">{{item.client}}</h5>
+        <p class="clientMessage">{{item.message}}</p>
+      </div>
+      <div class="seperator"></div>
+    </div>
+  </div>
+</ng-scrollbar>
+</div>

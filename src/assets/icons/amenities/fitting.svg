@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>fitting</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="75" cy="75" r="74"></circle>
+        <filter x="-4.7%" y="-3.4%" width="109.5%" height="109.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.737457483   0 0 0 0 0.737457483   0 0 0 0 0.737457483  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="fitting" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#ECF0F1" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="noun_hanger_1374540" transform="translate(41.000000, 49.000000)" stroke="#000000" stroke-linecap="round" stroke-width="2">
+            <path d="M34.2172086,19.3939296 L1.0301539,41.7533525 C0.181405276,42.3200187 -0.196598467,43.3785188 0.100182773,44.3574922 C0.396964013,45.3364655 1.2982506,46.0040852 2.31754311,45.9999812 L68.6824569,45.9999812 C69.7017494,46.0040852 70.603036,45.3364655 70.8998172,44.3574922 C71.1965985,43.3785188 70.8185947,42.3200187 69.9698461,41.7533525 L36.791987,19.3939296 C36.0134585,18.8686901 34.9957372,18.8686901 34.2172086,19.3939296 Z" id="Path"></path>
+            <path d="M30,6 C30,2.69096672 32.8971429,0 36.5,0 C40.1028571,0 43,2.67194929 43,6 C43,9.32805071 40.1028571,12 36.5,12" id="Path"></path>
+            <path d="M36.5,12 L36.5,19" id="Path"></path>
+        </g>
+    </g>
+</svg>

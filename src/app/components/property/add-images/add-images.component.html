@@ -1,0 +1,45 @@
+<div class="features">
+
+  <div class="row">
+    <div class="col-text">
+      <h3 class="header-semi-bold">Add photos to your listing</h3>
+    </div>
+    <div class="col-img">
+      <button *ngIf="images.length > 3" class="upload" (click)="updateDB()">upload images</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-photo" *ngIf="profilePicAdded == false && loading == false">
+      <div class="image-container">
+        <div class="fileUpload blue-btn btn width195">
+          <span><mat-icon>camera_alt</mat-icon></span>
+          <span><p>upload image</p></span>
+          <input type="file" accept="image/jpeg, image/png" class="uploadlogo" (change)="uploadProfileFile($event)" />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-photo" *ngIf="profilePicAdded == true && loading == false">
+      <div class="image-container">
+        <div class="fileUpload blue-btn btn width100">
+          <span><mat-icon>camera_alt</mat-icon></span>
+          <span><p>upload more images</p></span>
+          <input type="file" accept="image/jpeg, image/png" class="uploadlogo" (change)="uploadFile($event)" />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-image" *ngIf="loading == true">
+      <app-loading></app-loading>
+      <p style="text-align: center; margin-top: -30px;">uploading image 😁 </p>
+    </div>
+    <div class="col-image" *ngFor="let i of images">
+      <img class="img" src="{{ i }}" />
+    </div>
+
+  </div>
+</div>

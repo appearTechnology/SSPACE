@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+body{
+  margin: 0
+}
+
+.text-header{
+  font-size: 18px;
+  color: #1b2437;
+}
+
+
+.header-bold{
+  color: #313131;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.header-semi-bold{
+  color: #313131;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.header-regular{
+  color: #313131;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.header-light{
+
+  color: #313131;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+
+.paragraph{
+  color: #313131;
+  font-family: 'Helvetica';
+  font-weight: 300;
+}
+
+.linkButton{
+  font-size: 15px;
+  color: #1b2437;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.bold-label {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.semi-bold-label {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.form-control{
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.label{
+  color: #313131;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.btn{
+  //background-color: #313131;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #313131;
+  font-size: 15px;
+  height: 44px;
+}
+
+.btn-clear{
+  background-color: transparent;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color:  #313131;
+  font-size: 15px;
+  border-width: 0px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

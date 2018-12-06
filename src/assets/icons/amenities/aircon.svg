@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>aircon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="75" cy="75" r="74"></circle>
+        <filter x="-4.7%" y="-3.4%" width="109.5%" height="109.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.737457483   0 0 0 0 0.737457483   0 0 0 0 0.737457483  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="aircon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#ECF0F1" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="noun_Cold_1421106" transform="translate(51.000000, 48.000000)" fill="#000000">
+            <polygon id="Path" points="46.9278449 34.275 46.8782383 33.025 35.3695068 33.425 25.1753502 27.5 35.3695068 21.575 46.8782383 21.975 46.9278449 20.725 37.3909758 20.3875 47.8703704 14.2875 47.2502879 13.2125 36.7708933 19.3125 41.2478891 10.8125 40.1565438 10.2375 34.7494243 20.4875 24.5552677 26.4125 24.5552677 14.55 30.6568797 4.7125 29.615141 4.0375 24.5552677 12.2 24.5552677 0 23.3151027 0 23.3151027 12.2 18.2552293 4.0375 17.2134907 4.7125 23.3151027 14.55 23.3151027 26.4125 13.1209461 20.4875 7.71382652 10.2375 6.62248129 10.8125 11.0994771 19.3125 0.620082518 13.2125 0 14.2875 10.4793945 20.3875 0.942525427 20.725 0.992132028 21.975 12.5008636 21.575 22.6950201 27.5 12.5008636 33.425 0.992132028 33.025 0.942525427 34.275 10.4793945 34.6125 0 40.7125 0.620082518 41.7875 11.0994771 35.6875 6.62248129 44.1875 7.71382652 44.7625 13.1209461 34.5125 23.3151027 28.5875 23.3151027 40.45 17.2134907 50.2875 18.2552293 50.9625 23.3151027 42.8 23.3151027 55 24.5552677 55 24.5552677 42.8 29.615141 50.9625 30.6568797 50.2875 24.5552677 40.45 24.5552677 28.5875 34.7494243 34.5125 40.1565438 44.7625 41.2478891 44.1875 36.7708933 35.6875 47.2502879 41.7875 47.8703704 40.7125 37.3909758 34.6125"></polygon>
+        </g>
+    </g>
+</svg>

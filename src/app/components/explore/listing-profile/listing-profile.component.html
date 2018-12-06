@@ -1,0 +1,25 @@
+<!--<app-nav-bar></app-nav-bar>-->
+
+<app-loading *ngIf="loaded == false"></app-loading>
+
+<div *ngIf="loaded == true" class="div">
+  <div class="slideshow">
+    <slideshow [imageUrls]="images" [autoPlay]="true" [showDots]="true"></slideshow>
+  </div>
+
+  <app-listing-display [docId]="docId" [listing]=listing></app-listing-display>
+  <div class="padding-bottom-footer"></div>
+</div>
+
+
+<!--<footer class="footer fixed-bottom">
+  <div class="chat-window" *ngIf="enquire == true">
+    <app-enquire-window [uid]="agent" [agent]="uid"></app-enquire-window>
+    <div class="test" (click)="closeEnquire()">
+      <h3 class="amount">x</h3>
+    </div>
+  </div>
+  <div class="test" (click)="enquireClick()" *ngIf="loaded == true && enquire == false">
+    <h3 class="amount">Enquire Now</h3>
+  </div>
+</footer>-->
